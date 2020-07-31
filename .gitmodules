@@ -6,3 +6,15 @@
 	path = dotbot-brew
 	url = https://github.com/d12frosted/dotbot-brew.git
 	ignore = dirty
+[submodule "vim/plugged/night-owl.vim"]
+	path = vim/plugged/night-owl.vim
+	url = git@github.com:haishanh/night-owl.vim.git
+	ignore = dirty
+[submodule "vim/plugged/vim-easy-align"]
+	path = vim/plugged/vim-easy-align
+	url = git@github.com:junegunn/vim-easy-align.git
+	ignore = dirty
+[submodule "vim/plugged/vim-plug"]
+	path = vim/plugged/vim-plug
+	url = git@github.com:junegunn/vim-plug.git
+	ignore = dirty
