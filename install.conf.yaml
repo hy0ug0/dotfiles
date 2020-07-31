@@ -1,0 +1,30 @@
+- brewfile:
+    - Brewfile
+
+- defaults:
+    link:
+      relink: true
+
+- clean: ["~"]
+
+- create:
+    - ~/Development/pro
+    - ~/Development/perso
+
+- shell:
+    - [sh ./scripts/config-oh-my-zsh.sh, Installing & configuring Oh My Zsh]
+    - [
+        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash,
+        Installing NVM,
+      ]
+    - [nvm install --lts, Installing Node LTS version]
+    - [curl -o- -L https://yarnpkg.com/install.sh | bash, Installing Yarn]
+
+- link:
+    ~/.vim: vim
+    ~/.vimrc: .vimrc
+    ~/.zshrc: .zshrc
+    ~/.gitconfig: .gitconfig
+    ~/.gitconfig-perso: .gitconfig-perso
+    ~/.gitconfig-pro: .gitconfig-pro
+    ~/.oh-my-zsh/custom/themes: ./oh-my-zsh-custom-themes
