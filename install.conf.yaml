@@ -14,11 +14,26 @@
 - shell:
     - [sh ./scripts/config-oh-my-zsh.sh, Installing & configuring Oh My Zsh]
     - [
-        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash,
+        bash -c "if ! command -v nvm; then curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash; fi;",
         Installing NVM,
       ]
     - [nvm install --lts, Installing Node LTS version]
-    - [curl -o- -L https://yarnpkg.com/install.sh | bash, Installing Yarn]
+    - [
+        bash -c "if ! command -v yarn; then curl -o- -L https://yarnpkg.com/install.sh | bash; fi;",
+        Installing Yarn,
+      ]
+    - [
+        bash -c "if ! command -v ~/.cargo/bin/cargo; then echo 1 | curl -sSf https://sh.rustup.rs | sh -s -- -y; fi;",
+        Installing Rust,
+      ]
+    - [
+        bash -c "if ! command -v bat; then echo 1 | ~/.cargo/bin/cargo install --locked bat; fi;",
+        Installing Bat,
+      ]
+    - [
+        bash -c "if ! command -v exa; then ~/.cargo/bin/cargo install exa; fi;",
+        Installing Exa,
+      ]
 
 - link:
     ~/.vim: vim

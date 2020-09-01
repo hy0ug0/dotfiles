@@ -11,6 +11,7 @@ brew "jsonnet"
 brew "k9s"
 brew "kubernetes-cli", link: false
 brew "ncdu"
+brew "pre-commit"
 brew "youtube-dl"
 brew "zsh"
 cask "keepassxc"
